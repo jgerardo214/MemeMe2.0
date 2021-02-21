@@ -1,0 +1,13 @@
+version: "Apple Swift version 5.3.2 (swiftlang-1200.0.45 clang-1200.0.32.28)"
+options: "afd2fa9bbd668232fa94cee63c8ecf26"
+build_time: [1613698947, 36503000]
+inputs:
+  "/Users/jonathangerardo/Documents/Jonathan Swift Practices/MemeMe 2/MemeMe2.0/MemeMe2.0/Controller/MemeEditorViewController.swift": [1613694909, 434163465]
+  "/Users/jonathangerardo/Documents/Jonathan Swift Practices/MemeMe 2/MemeMe2.0/MemeMe2.0/CollectionViewCell.swift": [1613694197, 333061087]
+  "/Users/jonathangerardo/Documents/Jonathan Swift Practices/MemeMe 2/MemeMe2.0/MemeMe2.0/Model/Meme.swift": [1613553812, 538202907]
+  "/Users/jonathangerardo/Documents/Jonathan Swift Practices/MemeMe 2/MemeMe2.0/MemeMe2.0/TableViewCell.swift": [1613678811, 953972419]
+  "/Users/jonathangerardo/Documents/Jonathan Swift Practices/MemeMe 2/MemeMe2.0/MemeMe2.0/Controller/SentMemesCollectionViewController.swift": [1613695210, 687411400]
+  "/Users/jonathangerardo/Documents/Jonathan Swift Practices/MemeMe 2/MemeMe2.0/MemeMe2.0/AppDelegate.swift": [1613692672, 683086100]
+  "/Users/jonathangerardo/Documents/Jonathan Swift Practices/MemeMe 2/MemeMe2.0/MemeMe2.0/Controller/SentMemesTableViewController.swift": [1613694845, 81985418]
+  "/Users/jonathangerardo/Documents/Jonathan Swift Practices/MemeMe 2/MemeMe2.0/MemeMe2.0/SceneDelegate.swift": [1613553812, 553709410]
+  "/Users/jonathangerardo/Documents/Jonathan Swift Practices/MemeMe 2/MemeMe2.0/MemeMe2.0/Controller/DetailViewController.swift": [1613694197, 351843130]
