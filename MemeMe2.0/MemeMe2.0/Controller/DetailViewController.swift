@@ -15,16 +15,15 @@ class DetailViewController: UIViewController {
     var meme: Meme!
     
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        imageView.image = meme.memedImage
-        
-    }
-    
-    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.imageView.image = meme.memedImage
 
-    
-    
+    }
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        self.tabBarController?.tabBar.isHidden = false
+    }
     
     
 }

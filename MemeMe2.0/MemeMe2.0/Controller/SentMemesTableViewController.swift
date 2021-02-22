@@ -9,8 +9,11 @@ import UIKit
 
 class SentMemesTableViewController: UITableViewController  {
     
-    var memes: [Meme] = []
-    let appDelegate = UIApplication.shared.delegate as! AppDelegate
+    var memes: [Meme] {
+     
+            return (UIApplication.shared.delegate as! AppDelegate).memes
+     
+    }
     
     @IBOutlet var memeTableView: SentMemesTableViewController!
     
@@ -20,24 +23,27 @@ class SentMemesTableViewController: UITableViewController  {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        memes = appDelegate.memes
         
-        tableView.register(TableViewCell.self, forCellReuseIdentifier: "TableViewCell")
-        
+        let dimension = (view.frame.size.height / 10)
+        tableView.rowHeight = dimension
 
         
     }
+    
+ 
     
     // TODO: viewWillAppear code is needed
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         tableView.reloadData()
+        
     }
     
     
     // MARK: Table View Data Source
     
-    // implement the code for showing the memes in the table
+    
+    
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
         return memes.count
@@ -46,15 +52,19 @@ class SentMemesTableViewController: UITableViewController  {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let cell = tableView.dequeueReusableCell(withIdentifier: "SentMemesTableViewCell", for: indexPath) as! TableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "TableViewCell", for: indexPath) as! TableViewCell
         
         let meme = self.memes[(indexPath as NSIndexPath).row]
         
-        cell.SentMemeTableView?.image = meme.memedImage
-        cell.imageView?.image = meme.memedImage
-        cell.textLabel?.text = memes[indexPath.row].topText + "..." + memes[indexPath.row].bottomText
         
+        cell.imageView?.image = meme.memedImage
+        cell.memedLabel?.text = meme.topText
+        
+        //[indexPath.row].topText + "..." + memes[indexPath.row].bottomText
+        //cell.textLabel?.text = meme.topText
         return cell
+        
+    
         
     }
     
