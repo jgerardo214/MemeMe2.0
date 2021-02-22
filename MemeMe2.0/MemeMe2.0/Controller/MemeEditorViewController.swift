@@ -62,7 +62,7 @@ class MemeEditorViewController: UIViewController, UIImagePickerControllerDelegat
     
     // MARK: Textfield Properties
     
-    // sets properties of the textfields
+    
     func setTextField (_ textField: UITextField, text: String) {
         
         textField.defaultTextAttributes = memeAttributes
@@ -134,11 +134,14 @@ class MemeEditorViewController: UIViewController, UIImagePickerControllerDelegat
     
     @IBAction func imageSelected(_ sender: Any) {
         
-        let imagePicker = UIImagePickerController()
-        imagePicker.sourceType = .photoLibrary
-        imagePicker.delegate = self
-        imagePicker.sourceType = .photoLibrary
-        present(imagePicker, animated: true, completion: nil)
+        presentPickerVC(source: .photoLibrary)
+    }
+    
+    func presentPickerVC(source: UIImagePickerController.SourceType) {
+        let pickerController = UIImagePickerController()
+        pickerController.delegate = self
+        pickerController.sourceType = source
+        present(pickerController, animated: true, completion: nil)
     }
     
     
@@ -172,9 +175,7 @@ class MemeEditorViewController: UIViewController, UIImagePickerControllerDelegat
     
    
     @IBAction func cameraButtonPressed(_ sender: Any) {
-        let imagePicker = UIImagePickerController()
-        imagePicker.delegate = self
-        present(imagePicker, animated: true, completion: nil)
+        presentPickerVC(source: .camera)
     }
     
     
